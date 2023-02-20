@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | fetch() Method</title>
+</head>
+<body>
+<script>
+    fetch("http://35.220.222.252/subgraphs/name/ianlapham/uniswap-v3", {
+        "headers": {
+            "accept": "application/json, multipart/mixed",
+            "accept-language": "zh-CN,zh;q=0.9",
+            "content-type": "application/json"
+        },
+        "referrer": "http://35.220.222.252/subgraphs/name/ianlapham/uniswap-v3/graphql?query=%7B%0A++pools%28%0A++++where%3A+%7Bid_in%3A+%5B%5D%7D%0A++++block%3A+%7Bnumber%3A+16795899%7D%0A++++orderBy%3A+totalValueLockedUSD%0A++++orderDirection%3A+desc%0A++++subgraphError%3A+allow%0A++%29+%7B%0A++++id%0A++++feeTier%0A++++liquidity%0A++++sqrtPrice%0A++++tick%0A++++token0+%7B%0A++++++id%0A++++++symbol%0A++++++name%0A++++++decimals%0A++++++derivedETH%0A++++++__typename%0A++++%7D%0A++++token1+%7B%0A++++++id%0A++++++symbol%0A++++++name%0A++++++decimals%0A++++++derivedETH%0A++++++__typename%0A++++%7D%0A++++token0Price%0A++++token1Price%0A++++volumeUSD%0A++++volumeToken0%0A++++volumeToken1%0A++++txCount%0A++++totalValueLockedToken0%0A++++totalValueLockedToken1%0A++++totalValueLockedUSD%0A++++__typename%0A++%7D%0A++bundles%28where%3A+%7Bid%3A+%221%22%7D%29+%7B%0A++++ethPriceUSD%0A++++__typename%0A++%7D%0A%7D",
+        "referrerPolicy": "strict-origin-when-cross-origin",
+        "body": "{\"query\":\"{\\n  pools(\\n    where: {id_in: []}\\n    block: {number: 16795899}\\n    orderBy: totalValueLockedUSD\\n    orderDirection: desc\\n    subgraphError: allow\\n  ) {\\n    id\\n    feeTier\\n    liquidity\\n    sqrtPrice\\n    tick\\n    token0 {\\n      id\\n      symbol\\n      name\\n      decimals\\n      derivedETH\\n      __typename\\n    }\\n    token1 {\\n      id\\n      symbol\\n      name\\n      decimals\\n      derivedETH\\n      __typename\\n    }\\n    token0Price\\n    token1Price\\n    volumeUSD\\n    volumeToken0\\n    volumeToken1\\n    txCount\\n    totalValueLockedToken0\\n    totalValueLockedToken1\\n    totalValueLockedUSD\\n    __typename\\n  }\\n  bundles(where: {id: \\\"1\\\"}) {\\n    ethPriceUSD\\n    __typename\\n  }\\n}\",\"variables\":null,\"extensions\":{\"headers\":null}}",
+        "method": "POST",
+        "mode": "cors",
+        "credentials": "omit"
+    });
+</script>
+</body>
+</html>

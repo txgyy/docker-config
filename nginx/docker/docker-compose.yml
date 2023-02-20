@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ../config/nginx-docker.conf:/etc/nginx/nginx.conf:ro
+      - ../logs/:/var/logs/nginx/
+
+    extra_hosts:
+      - host.docker.internal:host-gateway
